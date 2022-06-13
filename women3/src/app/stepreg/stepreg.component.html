@@ -1,0 +1,80 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>New Step Registration</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                   
+                    <div class="form-group mt-4">
+                        <!-- <label>First Name</label> -->
+                        <input type="text" placeholder="Enter First Name" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
+                        <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.fname.errors.required">First Name is required</div>
+                            <div *ngIf="f.fname.errors.pattern">Inavalid First Name</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-2">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!-- <label>Last Name</label> -->
+                                <input type="text" placeholder="Enter Last Name" formControlName="lname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
+                                <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                                    <div *ngIf="f.lname.errors.required">Last Name is required</div>
+                                    <div *ngIf="f.lname.errors.email">Last Name must be a valid</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!-- <label>Father Name</label> -->
+                                <input type="text" placeholder="Enter Father Name" formControlName="fathername" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fathername.errors }" />
+                                <div *ngIf="submitted && f.fathername.errors" class="invalid-feedback">
+                                    <div *ngIf="f.fathername.errors.required">Father Name is required</div>
+                                    <div *ngIf="f.fathername.errors.minlength">Father Name must be at least 6 characters</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group mt-2">
+                        <!--<label>Mother name</label>-->
+                        <input type="text" placeholder="Enter Mother Name" formControlName="mothername" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mothername.errors }" />
+                        <div *ngIf="submitted && f.mothername.errors" class="invalid-feedback">
+                            <div *ngIf="f.mothername.errors.required">Mother Name is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <!--<label>Phone No</label>-->
+                        <input type="text" placeholder="Enter Phone Number" formControlName="phoneNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNo.errors }" />
+                        <div *ngIf="submitted && f.phoneNO.errors" class="invalid-feedback">
+                            <div *ngIf="f.phoneNo.errors.required">Phone Number is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <!--<label>Aaadhar Number</label>-->
+                        <input type="text" placeholder="Enter Aadhar Number" formControlName="aadharNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.aadharNo.errors }" />
+                        <div *ngIf="submitted && f.aadharNo.errors" class="invalid-feedback">
+                            <div *ngIf="f.aadharNo.errors.required">Aaadhar Number is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <!--<label>Mother name</label>-->
+                        <input type="text" placeholder="Enter Training Course" formControlName="trainingC" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.trainingC.errors }" />
+                        <div *ngIf="submitted && f.traininC.errors" class="invalid-feedback">
+                            <div *ngIf="f.trainingC.errors.required">Training Course is required</div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-register">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

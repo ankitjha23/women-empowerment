@@ -1,0 +1,71 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>New NGO Registration</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                   
+                    <div class="form-group mt-4">
+                        <!-- <label>Registration Name</label> -->
+                        <input type="text" placeholder="Enter Registered Number" formControlName="registeredNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.registeredNumber.errors }" />
+                        <div *ngIf="submitted && f.registeredNumbererrors" class="invalid-feedback">
+                            <div *ngIf="f.registeredNumber.errors.required">Registered Number is required</div>
+                            <div *ngIf="f.registeredNumber.errors.pattern">Inavalid registered Number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-2">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!-- <label>Organisation Name</label> -->
+                                <input type="text" placeholder="Enter Organisation Name" formControlName="organisationname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.organisationname.errors }" />
+                                <div *ngIf="submitted && f.organisationname.errors" class="invalid-feedback">
+                                    <div *ngIf="f.organisationname.errors.required">Organisation Name is required</div>
+                                    <div *ngIf="f.organisationname.errors.email">Organisation Name must be a valid</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <!-- <label>incharge Name</label> -->
+                                <input type="text" placeholder="Enter Incharge Name" formControlName="inchargename" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.inchargename.errors }" />
+                                <div *ngIf="submitted && f.inchargename.errors" class="invalid-feedback">
+                                    <div *ngIf="f.inchargename.errors.required">Incharge Name is required</div>
+                                    <div *ngIf="f.inchargename.errors.minlength">Incharge Name must be a valid</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="form-group mt-2">
+                        <!--<label>Aaadhar Number</label>-->
+                        <input type="text" placeholder="Enter Aadhar Number" formControlName="aadharNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.aadharNo.errors }" />
+                        <div *ngIf="submitted && f.aadharNo.errors" class="invalid-feedback">
+                            <div *ngIf="f.aadharNo.errors.required">Aaadhar Number is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <!--<label>City</label>-->
+                        <input type="text" placeholder="Enter City" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+                        <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                            <div *ngIf="f.city.errors.required">City is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <!--<label>pincode</label>-->
+                        <input type="text" placeholder="Enter Pincode" formControlName="pincode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }" />
+                        <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                            <div *ngIf="f.pincode.errors.required">Pincode is required</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-register">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

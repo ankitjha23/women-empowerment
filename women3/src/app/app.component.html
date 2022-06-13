@@ -1,0 +1,57 @@
+<div class="row my-3">
+  <div class="col-lg-7 d-flex justify-content-between">
+    <li class="nav-item">
+      <a routerLink="home" class="clickme info" routerLinkActive="active">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="policy" class="clickme info" routerLinkActive="active">LEGISLATIONS & POLICY</a>
+    </li>
+    
+    <li class="nav-item">
+      <a routerLink="step" class="clickme info" routerLinkActive="active">STEP</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="ngo" class="clickme info" routerLinkActive="active">NGO</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="contact" class="clickme info" routerLinkActive="active">CONTACT US</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="about" class="clickme info" routerLinkActive="active">ABOUT US</a>
+    </li>
+  </div>
+  <div class="col-lg-5 d-flex justify-content-end">
+    <!-- <li class="nav-item">
+      <a routerLink="register" class="clickme info" routerLinkActive="active">REGISTER</a>
+    </li> -->
+
+    <li class="nav-item">
+      <a routerLink="login" class="clickme info" routerLinkActive="active">USER LOGIN</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="logout" class="clickme info" routerLinkActive="active">LOGOUT</a>
+    </li>
+  </div>
+</div>
+
+<div class="container">
+  <br>
+  <h2 style="text-align: center; justify-content: space-evenly;" class="d-flex align-items-center">
+    <img src="/assets/images/mwcd.svg" alt="" width="100px">
+    {{title}}</h2>
+  <hr>
+  
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet> 
+      <h1></h1>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer font-small mdb-color lighten-3 py-2 card-body" style="position:fixed; bottom:0; width:100%;">
+  <div class="footer-copyright text-center py-3">All Rights Reserved 2022 @Ministry of Women and Child Development, GOI</div>
+</footer>
